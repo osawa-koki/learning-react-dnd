@@ -2,6 +2,8 @@
 
 🥠🥠🥠 `React DnD`を使ってみる！  
 
+![成果物](./docs/images/fruit.gif)  
+
 <https://react-dnd.github.io/react-dnd/about>  
 
 ## 実行方法
