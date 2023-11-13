@@ -1,6 +1,6 @@
-import fs from 'fs'
 import React, { useEffect, useState } from 'react'
 import { Button, ListGroup } from 'react-bootstrap'
+import getFruits from '../src/getFruits'
 
 interface Props {
   fruits: string[]
@@ -51,7 +51,7 @@ export default function VanillaPage (props: Props): React.JSX.Element {
 
   return (
     <>
-      <h1>Drag and Drop Sort</h1>
+      <h1>Drag and Drop Sort (Vanilla)</h1>
       <ListGroup>
         {fruits.map((fruit, index) => (
           <ListGroup.Item
@@ -74,11 +74,5 @@ export default function VanillaPage (props: Props): React.JSX.Element {
 }
 
 export function getStaticProps (): { props: Props } {
-  const fruitsString = fs.readFileSync('./data/fruits.json', 'utf-8')
-  const fruits = JSON.parse(fruitsString)
-  return {
-    props: {
-      fruits
-    }
-  }
+  return getFruits()
 }
