@@ -6,7 +6,7 @@ interface Props {
   fruits: string[]
 }
 
-export default function vanillaPage (props: Props): React.JSX.Element {
+export default function VanillaPage (props: Props): React.JSX.Element {
   const { fruits: presetFruits } = props
 
   const [fruits, setFruits] = useState<string[] | null>(null)
